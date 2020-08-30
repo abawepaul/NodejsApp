@@ -2,6 +2,11 @@
 //- inform this template that it should use the layout file
 extends layout
 
+//- check if a data attribute exists, and if so, use it to set the values of the respective fields. If it doesn’t exist, we’ll initialize it to an empty object, so that the form will still render correctly when you load it for the first time
+//- check for an errors property, and if it’s present, loop over any errors and display them in a list
+//- pug does interpolation by following the tag name with an equals sign (li=)
+//- reference that attribute to set the field’s value
+//- add some class names to the error messages and the form elements:
 block content
   -data = data || {}
 

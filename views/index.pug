@@ -1,3 +1,7 @@
+//- view template for /registrations route
+//- check the length of whatever we’re handed and either loop over it and output the records to the screen, or display a “No registrations” message
+//- add some class names to the error messages and the form elements:
+
 extends layout
 
 block content
@@ -12,4 +16,4 @@ block content
           td= registration.name
           td= registration.email
   else
-    p No registrations yet :(
+    p No registrations yet

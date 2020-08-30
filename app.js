@@ -18,6 +18,7 @@ app.set('view engine', 'pug');
 
 // using body-parser’s urlencoded method allows us to handle data sent as application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
+// serve static files such as images, JavaScript files and CSS files in Express using the built-in express.static middleware function
 // app.use(express.static('public'));
 // whenever it receives a request from forward slash anything, it should use the routes file.
 app.use('/', routes);
