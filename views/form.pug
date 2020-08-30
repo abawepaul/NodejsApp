@@ -1,50 +1,36 @@
-//- extends layout
 
-//- block content
-//-   -data = data || {}
+//- inform this template that it should use the layout file
+extends layout
 
-//-   if errors
-//-     ul.my-errors
-//-       for error in errors
-//-         li= error.msg
+block content
+  -data = data || {}
 
-//-   form(action="." method="POST" class="form-registration")
-//-     label(for="name") Name:
-//-     input(
-//-       type="text"
-//-       id="name"
-//-       name="name"
-//-       class="form-control"
-//-       value=data.name
-//-     )
+  if errors
+    ul.my-errors
+      for error in errors
+        li= error.msg
 
-//-     label(for="email") Email:
-//-     input(
-//-       type="email"
-//-       id="email"
-//-       name="email"
-//-       class="form-control"
-//-       value=data.email
-//-     )
+  form(action="." method="POST" class="form-registration")
+    label(for="name") Name:
+    input(
+      type="text"
+      id="name"
+      name="name"
+      class="form-control"
+      value=data.name
+    )
 
-//-     input(
-//-       type="submit"
-//-       value="Submit"
-//-       class="btn btn-lg btn-primary btn-block"
-//-     )
+    label(for="email") Email:
+    input(
+      type="email"
+      id="email"
+      name="email"
+      class="form-control"
+      value=data.email
+    )
 
-
-form(action="." method="POST")
-  label(for="name") Name:
-  input(
-    type="text"
-    id="name"
-    name="name"
-  )
-  label(for="email") Email:
-  input(
-    type="email"
-    id="email"
-    name="email"
-  )
-  input(type="submit" value="Submit")
+    input(
+      type="submit"
+      value="Submit"
+      class="btn btn-lg btn-primary btn-block"
+    )
